@@ -11,3 +11,18 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+wd() {
+  . ~/bin/wd/wd.sh
+}
+
+alias ll="ls -altrh"
+
+# now vim can use !s and !q
+alias vim="stty stop '' -ixoff ; vim"
+ttyctl -f
+
+# remap caps to ESC
+xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+wd() {
+  . ~/bin/wd/wd.sh
+}
