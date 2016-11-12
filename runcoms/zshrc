@@ -26,3 +26,6 @@ xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
 wd() {
   . ~/bin/wd/wd.sh
 }
+
+export GOPATH=~/dev/gocode
+export PATH=$PATH:$GOPATH/bin
